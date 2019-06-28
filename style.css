@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+section h2{
+    border-bottom: 1px solid black;
+}

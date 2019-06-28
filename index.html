@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Resume</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+   <div id="root-app"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+
+    <script type="text/babel">
+
+       function Image(){
+           return (
+               <img src="https://www.saltercollege.com/SiteData/images/SalterColl/b8fcda7dd4fc7f61/Salter%20College-What%20to%20Wear%20to%20a%20Job%20Interview-for%20Women_344.jpg" alt="business woman"/>
+           );
+       }
+
+       function Head(){
+           return (
+                <header>
+                    <h1>Sally N. Gonzales</h1>
+                </header>
+           );
+       }
+
+       function Contact(){
+           return (
+                 <address>     
+                    <p>E-mail: <a href="malito:sallyg@gmail.com">sallyg@gmail.com</a></p>   
+                    <p>Phone: <a href="tel:770-695-0592">770-695-0592</a></p>
+                </address>
+           );
+       }
+
+       function JobOne() {
+           return(
+                <div>
+                    <h3>Senior C Developer</h3>
+                    <p>Intel</p>
+                    <p><i>09/2010 - Present</i></p>
+                    <p>Use C and embedded assembly to make new chips compatable with cutting edge hardware.</p>
+                </div>
+           );
+       }
+
+       function JobTwo(){
+           return (
+
+                <div>
+                    <h3>Submition Reviewer</h3>
+                    <p>Blender Foundation</p>
+                    <p><i>03/2003 - 06/2011</i></p>
+                    <p>Review code patches submitted via github. Test code snippets and debug as needed.</p>
+                </div>
+           );
+       }
+
+
+       function History(){
+           return (
+            <section>
+                <h2>Employment History</h2>     
+                <JobOne/>
+            </section>
+           );
+       }
+
+    //    Education
+       function Education() {
+           return (
+               <section>
+                    <h2>Education</h2>
+                    <p>Graduated with honors from Harvard</p>
+                    <p>Masters in Computer Science</p>
+                    <p>GPA: 4.0</p>
+                    <br/>
+                    <p>Certificates in: </p>
+                    <ul>
+                        <li>Front End Web Development</li>
+                        <li>Cloud Security</li>
+                        <li>Data Encryption</li>
+                    </ul>
+                </section> 
+           );
+       }
+
+           //    main container
+       function Main(){
+           return (
+               <main role="main">
+                    <History/>
+                    <Education/>
+               </main>
+           );
+       }
+    
+       function App(){
+           return ([
+               <Image key="image"/>,
+               <Head key="head"/>,
+               <Contact key="Contact"/>,
+               <Main key="main"/>
+           ]);
+       }
+        ReactDOM.render(
+            <App />,
+            document.querySelector("#root-app")
+        );
+
+    </script>
+
+</body>
+
+</html>
